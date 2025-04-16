@@ -193,7 +193,7 @@ func (pdb PowerDNSGenericSQLBackend) ServeDNS(ctx context.Context, w dns.Respons
 }
 
 func (pdb *PowerDNSGenericSQLBackend) ResolveCNAMEs(cname string) ([]*pdnsmodel.Record, error) {
-	resolveTypes := []string{"CNAME", "A", "AAA"}
+	resolveTypes := []string{"CNAME", "A", "AAAA"}
 	resolveCNAME := true
 
 	var cnameRecords []*pdnsmodel.Record
